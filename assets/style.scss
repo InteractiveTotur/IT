@@ -1,0 +1,138 @@
+:root {
+  --arabic-font: Cairo, sans-serif;
+  --english-font: Roboto, sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--english-font);
+  scroll-behavior: smooth;
+}
+.container {
+  .land-image {
+    height: 100vh;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+    .land-image-layer {
+      background-color: orange;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.1;
+    }
+    .land-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 75px;
+      text-transform: uppercase;
+      color: yellow;
+      text-shadow: 5px 5px gray;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 20px;
+    .logo {
+      color: yellow;
+      font-size: 30px;
+      margin-left: 10%;
+    }
+    .menu {
+      color: white;
+      font-size: 20px;
+      margin-right: 10%;
+      text-transform: uppercase;
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        li {
+          a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: gray;
+            border-radius: 25px;
+            &:is(:hover, :focus) {
+              color: black;
+              background-color: yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-us {
+    .label h2 {
+      font-size: 55px;
+      text-align: center;
+      margin-top: 50px;
+      text-transform: capitalize;
+    }
+    .content p {
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 20px;
+    }
+  }
+  .free-videos {
+    margin-top: 50px;
+    width: 100%;
+    .label h2 {
+      text-align: center;
+      font-size: 55px;
+    }
+    .content iframe {
+      margin-top: 20px;
+      width: 192;
+      height: 108;
+      margin-left: calc(50% - 192px);
+    }
+  }
+  .footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .copyright {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: yellow;
+        &:is(:hover, :focus) {
+          color: white;
+        }
+      }
+      h2 {
+        margin: 0 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
